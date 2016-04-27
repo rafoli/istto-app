@@ -9,7 +9,7 @@ TLApp.Services
       places: function () {
         return $http({
           method: "GET",
-          url: TML_API_PATH + "places.json",
+          url: TML_API_PATH + "chef/places",
           headers: { "Authorization": "Basic " + btoa(Storage.get("authToken") + ":") }
         });
       },
@@ -17,7 +17,7 @@ TLApp.Services
       place: function (placeId) {
         return $http({
           method: "GET",
-          url: TML_API_PATH + "places/" + placeId + ".json",
+          url: TML_API_PATH + "chef/menus/" + placeId,
           headers: { "Authorization": "Basic " + btoa(Storage.get("authToken") + ":") }
         });
       }

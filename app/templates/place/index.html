@@ -31,7 +31,12 @@
 
             <h2>--> Menu</h2>
             <ul>
-              <li ng-repeat="menu in place.menu"> {{ menu.name }} - {{ menu.price }} </li>
+              <li ng-repeat="menu in place.menus">
+              <div>
+              <img style="width:200px; height:200px;" src="{{menu.image}}">
+              {{ menu.name }} - {{ menu.price }}
+              </div>
+              </li>
             </ul>
           </div>
         </div>

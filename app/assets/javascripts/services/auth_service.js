@@ -8,7 +8,7 @@ TLApp.Services
       getToken: function(user) {
         return $http({
           method: "GET",
-          url: TML_API_PATH + "tokens.json",
+          url: TML_API_PATH + "user/me",
           headers: { "Authorization": "Basic " + btoa(user.username + ":" + user.password) }
         });
       },
