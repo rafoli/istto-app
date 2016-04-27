@@ -1,0 +1,26 @@
+{
+  "name": "vitagourmet",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rafoli/vitagourmet",
+  "authors": [
+    "Djalma Araujo <djalma.araujo@gmail.com>",
+    "Rafael <rafoli@gmail.com>",
+  ],
+  "description": "VitaGourmet",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "angular-local-storage": "~0.2.2",
+    "angular-moment": "~0.10.2",
+    "ng-lodash": "~0.2.3",
+    "angular-filter": "~0.5.5"
+  }
+}

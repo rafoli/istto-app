@@ -1,0 +1,38 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button mdl-layout--fixed-header">
+  <main class="mdl-layout__content">
+    <div class="mdl-grid" style="max-width: 800px;">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-grid login">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-color--white login mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="mdl-color--red-600 mdl-color-text--white pam" ng-show="showError">
+              Usuário ou senha inválidos. Tente novamente.
+            </div>
+
+            <h2>Vita Gourmet</h2>
+            <p class="mdl-color-text--grey-400">Entre com os mesmos dados de sua conta VitaGourmet <br /> para acessar.</p>
+
+            <form ng-submit="login()">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="email" name="username" ng-model="params.username" />
+                <label class="mdl-textfield__label" for="sample2">E-mail</label>
+                <span class="mdl-textfield__error">E-mail inválido</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="password" name="password" ng-model="params.password" />
+                <label class="mdl-textfield__label" for="sample2">Senha</label>
+                <span class="mdl-textfield__error">Senha inválida</span>
+              </div>
+
+              <br />
+              <br />
+              <br />
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--amber-400 mdl-js-ripple-effect mdl-color-text--white">{{submitButton}}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

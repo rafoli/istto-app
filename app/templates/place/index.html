@@ -1,0 +1,44 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button  mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header mdl-color-text--white mdl-color--grey-900">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Praça de Alimentação</span>
+
+      <div class="mdl-layout-spacer"></div>
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Eventick Check-in</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#/events">Praça de Alimentação</a>
+      <a class="mdl-navigation__link" href="#/logout">Sair</a>
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+    <div class="mdl-layout__tab-panel">
+      <div class="page-content">
+        <div class="mdl-grid">
+          <div class="mdl-card mdl-shadow--2dp event-card--wide">
+            <div class="mdl-card__title" style="background-position: center top; background-size: contain; background-image: url({{place.logo}});">
+              <h2 class="mdl-card__title-text" ng-hide="place.logo">{{place.name}}</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              {{place.name}}
+              <br />
+              <strong>Alguma Data</strong>
+            </div>
+
+            <h2>--> Menu</h2>
+            <ul>
+              <li ng-repeat="menu in place.menu"> {{ menu.name }} - {{ menu.price }} </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="tml-snackbar mdl-shadow--2dp ng-hide" ng-cloak tml-snack message="alert"></div>
