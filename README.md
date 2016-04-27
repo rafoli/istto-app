@@ -1,7 +1,7 @@
 # Istto
 ## Writing code
 
-In order to collaborate with Eventick code you MUST be aware that we adopted [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
+In order to collaborate with **istto** code you MUST be aware that we adopted [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
 
 So, what is GitHub Flow?
 
@@ -28,20 +28,4 @@ gulp dev-server # This will serve `app` folder
 ## Build
 ```javascript
 gulp build // This will replace the API URL to production by default. If you youse ```--env development``` will build with localhost instead
-```
-
-## Deploy
-To deploy checkin your must have setup the credentials previously in your PATH. Make sure to have these keys setup:
-
-```bash
-export TML_S3_KEY="123456"
-export TML_S3_SECRET="XXXXXX"
-export TML_S3_BUCKET="bucketname" // Default: bucketname
-export TML_S3_REGION="sa-east-1" // Default: sa-east-1 (São Paulo)
-```
-
-And then:
-
-```javascript
-gulp deploy
 ```
