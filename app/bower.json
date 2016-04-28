@@ -16,8 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.3",
-    "angular-route": "~1.4.3",
+    "angular": "~1.4.5",
+    "angular-route": "~1.4.10",
+    "angular-ui-router": "~0.2.18",    
     "angular-local-storage": "~0.2.2",
     "angular-moment": "~0.10.2",
     "ng-lodash": "~0.2.3",
