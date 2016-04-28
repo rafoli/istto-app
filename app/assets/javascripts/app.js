@@ -37,6 +37,7 @@ angular.module(tomorrowLand).config(function ($routeProvider, $locationProvider,
     });
 
   localStorageServiceProvider.setPrefix(tomorrowLand);
+  $locationProvider.html5Mode(true);  
 
 }).run(function ($rootScope, $timeout, localStorageService, $location, AuthService, $window) {
   if (!AuthService.validateToken(localStorageService.get("authTokenWhen"), $location.url())) {
