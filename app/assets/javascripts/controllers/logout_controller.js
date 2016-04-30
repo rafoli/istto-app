@@ -1,6 +1,6 @@
-/*globals TLApp*/
+/*globals isttoApp*/
 
-TLApp.Controllers
+isttoApp.Controllers
   .controller("LogoutController", ["$scope",
     "localStorageService",
     "$window", function ($scope, Storage, $window) {

@@ -1,5 +1,5 @@
-/*globals TLApp, ApplicationController*/
+/*globals isttoApp, ApplicationController*/
 
-TLApp.Controllers
+isttoApp.Controllers
   .controller("ApplicationController", ["$scope", function ($scope) {
   }]);

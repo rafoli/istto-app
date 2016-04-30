@@ -1,6 +1,6 @@
-/*globals TLApp*/
+/*globals isttoApp*/
 
-TLApp.Controllers
+isttoApp.Controllers
   .controller("LoginController", ["$scope",
     "AuthService",
     "localStorageService",

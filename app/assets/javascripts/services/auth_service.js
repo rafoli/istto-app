@@ -1,4 +1,4 @@
-TLApp.Services
+isttoApp.Services
   .service("AuthService", ["$http", function ($http) {
     function tokenAuth(token) {
       return {"Authorization": "Basic " + btoa(token + ":")};
@@ -8,7 +8,7 @@ TLApp.Services
       getToken: function(user) {
         return $http({
           method: "GET",
-          url: TML_API_PATH + "user/me",
+          url: TT_API_PATH + "user/me",
           headers: { "Authorization": "Basic " + btoa(user.username + ":" + user.password) }
         });
       },

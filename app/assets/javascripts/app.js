@@ -1,18 +1,17 @@
 /*globals angular, componentHandler */
 
-var tomorrowLand = "tomorrowLand";
+var istto = "istto";
 
-angular.module(tomorrowLand, ["ngRoute",
-  "tomorrowLand.controllers",
-  "tomorrowLand.directives",
-  "tomorrowLand.services",
-  "tomorrowLand.filters",
+angular.module(istto, ["ngRoute",
+  "istto.controllers",
+  "istto.directives",
+  "istto.services",
+  "istto.filters",
   "LocalStorageModule",
-  "angularMoment",
   "ngLodash",
   "angular.filter"]);
 
-angular.module(tomorrowLand).config(function ($routeProvider, $locationProvider, localStorageServiceProvider) {
+angular.module(istto).config(function ($routeProvider, $locationProvider, localStorageServiceProvider) {
   var now = "?timestamp=" + Date.now();
 
   $routeProvider
@@ -31,13 +30,12 @@ angular.module(tomorrowLand).config(function ($routeProvider, $locationProvider,
       controller: "PlacesController"
     })
 
-    .when("/place/:slug", {
+    .when("/place/:placeId", {
       templateUrl: "templates/place/index.html" + now,
       controller: "PlaceController"
     });
 
-  localStorageServiceProvider.setPrefix(tomorrowLand);
-  
+  localStorageServiceProvider.setPrefix(istto);
 
 }).run(function ($rootScope, $timeout, localStorageService, $location, AuthService, $window) {
   if (!AuthService.validateToken(localStorageService.get("authTokenWhen"), $location.url())) {
@@ -46,9 +44,9 @@ angular.module(tomorrowLand).config(function ($routeProvider, $locationProvider,
   }
 });
 
-var TLApp = TLApp || {};
+var isttoApp = isttoApp || {};
 
-TLApp.Controllers = angular.module("tomorrowLand.controllers", []);
-TLApp.Directives = angular.module("tomorrowLand.directives", []);
-TLApp.Services = angular.module("tomorrowLand.services", []);
-TLApp.Filters = angular.module("tomorrowLand.filters", []);
+isttoApp.Controllers = angular.module("istto.controllers", []);
+isttoApp.Directives = angular.module("istto.directives", []);
+isttoApp.Services = angular.module("istto.services", []);
+isttoApp.Filters = angular.module("istto.filters", []);
